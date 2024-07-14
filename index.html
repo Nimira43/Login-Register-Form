@@ -8,9 +8,47 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/png" href="images/billy.png">
   <link rel="stylesheet" href="style.css">
-  <title></title>
+  <title>Login Register Form</title>
 </head>
 <body>
-  <script src=""></script>
+  <div class="container">
+    <div class="form-wrapper">
+      <div class="form-wrapper-left">
+        <h1>Register</h1>
+        <form class="form-register">
+          <div class="input-group">
+            <input type="text" placeholder="Username">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="input-group">
+            <input type="email" placeholder="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="input-group">
+            <input type="password" placeholder="Password">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <button class="form-btn" type="btn">Register</button>        
+        </form>
+        <a href="#" class="login-link">Login</a>
+      </div>
+      <div class="form-wrapper-right">
+        <h1>Login</h1>
+        <form class="form-register">
+          <div class="input-group">
+            <input type="text" placeholder="Username">
+            <i class="fa-solid fa-user"></i>
+          </div> 
+          <div class="input-group">
+            <input type="password" placeholder="Password">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <button class="form-btn" type="btn">Login</button>
+        </form>
+        <a href="#" class="register-link">Register</a>
+      </div>
+    </div>
+  </div>
+  <script src="script.js "></script>
 </body>
 </html>
