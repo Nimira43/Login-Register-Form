@@ -32,8 +32,10 @@ html {
   width: 100rem;
   height: 65rem;
   background-color: rgba(0, 0, 0, 0.875);
+  display: flex;
   border-radius: 2rem;
   box-shadow: 0 0.3rem 3rem rgba(255, 68, 0, 0.3);
+  overflow: hidden;
 }
 
 .form-wrapper-left,
