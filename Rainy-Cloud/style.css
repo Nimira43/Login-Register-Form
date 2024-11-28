@@ -11,12 +11,13 @@ body {
   min-height: 100vh;
   background: linear-gradient(
     to top, 
-    #006400, 
-    #777, 
-    #666, 
-    #555, 
-    #444,
-    #333
+    #006400 0%, 
+    #006400 22%, 
+    #777 23%, 
+    #666 40%, 
+    #555 60%, 
+    #444 80%,
+    #333 100%
   );
 }
 
@@ -24,5 +25,5 @@ body {
   position: relative;
   height: 400px;
   width: 320px;
-  border-bottom: 3px solid #333;
+  border-bottom: 3px solid #006400;
 }
