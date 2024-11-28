@@ -1,9 +1,16 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: #000;
+  position: relative;
   overflow: hidden;
 }
 
@@ -33,26 +40,35 @@ body {
   animation: tardis-light 0.5s infinite;
 }
 
-.tardis::after { 
-  content: ''; 
-  position: absolute; 
-  top: 30px; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  width: 90%; height: 80%; 
-  background: #0044cc; 
-  box-shadow: 0 0 0 3px #022263, 
-              0 0 0 6px #032a78, 
-              inset 0 0 0 5px #022263, 
-              inset 0 0 0 8px #032a78; 
-} 
+@keyframes materialise {
+  0%, 100% {
+      opacity: 0;
+      transform: scale(0.5);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes tardis-light {
+  0%, 100% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+      box-shadow: 0 0 30px #fff, 
+                  0 0 60px #fff, 
+                  0 0 90px #fff;
+  }
+}
 
 .window { 
   position: absolute; 
   top: 10px; 
   left: 10px; 
-  width: 40px; 
-  height: 40px; 
+  width: 80px; 
+  height: 80px; 
   background: #fff; 
   border: 3px solid #000; 
   box-shadow: 0 0 0 2px #0044cc, 
@@ -70,9 +86,6 @@ body {
   left: 20px; 
   width: calc(100% - 40px); 
   height: 75%; 
-  border: 3px solid #000; 
-  box-shadow: 0 0 0 2px #0044cc, 
-  inset 0 0 0 3px #022263;
 }
 
 .tardis .door { 
@@ -105,6 +118,21 @@ body {
   animation: open-right-door 2s forwards; 
 } 
 
+.menu { 
+  position: absolute; 
+  top: 100px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  display: none; 
+  text-align: center; 
+  z-index: 2; 
+} 
+
+.tardis:hover .menu { 
+  display: block; 
+} 
+
+
 @keyframes open-left-door { 
   to { 
     transform: rotateY(-90deg); 
@@ -117,26 +145,21 @@ body {
   } 
 }
 
-@keyframes materialise {
-  0%, 100% {
-      opacity: 0;
-      transform: scale(0.5);
-  }
-  50% {
-      opacity: 1;
-      transform: scale(1);
-  }
+.menu a { 
+  display: block; 
+  color: #fff; 
+  text-decoration: none; 
+  margin: 10px 0; 
 }
 
-@keyframes tardis-light {
-  0%, 100% {
-      opacity: 0;
-  }
-  50% {
-      opacity: 1;
-      box-shadow: 0 0 30px #fff, 
-                  0 0 60px #fff, 
-                  0 0 90px #fff;
-  }
+.star-field { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: transparent; 
+  z-index: -1; 
 }
+
 
