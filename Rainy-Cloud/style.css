@@ -4,37 +4,4 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Bitter', serif;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #111;
-}
-
-h2  {
-  position: relative;
-  font-size: 5rem;
-  font-weight: 500;
-  color: #333;
-}
-
-@keyframes animate {
-  0%, 20% {
-    color: #333;
-  }
-  21%, 79% {
-    color: #ff4500;
-  }
-  80%, 100% {
-    color: #f333;
-  }
-}
-
-h2 span {
-  position: relative;
-  animation: animate 1s linear infinite;
 }
