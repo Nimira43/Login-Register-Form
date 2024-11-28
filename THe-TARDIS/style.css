@@ -30,7 +30,7 @@ body {
 .tardis:before {
   content: "";
   position: absolute;
-  top: -30px;
+  top: -40px;
   left: 50%;
   width: 30px;
   height: 30px;
