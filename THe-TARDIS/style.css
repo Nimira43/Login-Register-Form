@@ -4,6 +4,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: #000;
+  overflow: hidden;
 }
 
 .tardis {
@@ -30,6 +31,90 @@ body {
   border-radius: 50% 50% 0 0;
   transform: translateX(-50%);
   animation: tardis-light 0.5s infinite;
+}
+
+.tardis::after { 
+  content: ''; 
+  position: absolute; 
+  top: 30px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 90%; height: 80%; 
+  background: #0044cc; 
+  box-shadow: 0 0 0 3px #022263, 
+              0 0 0 6px #032a78, 
+              inset 0 0 0 5px #022263, 
+              inset 0 0 0 8px #032a78; 
+} 
+
+.window { 
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  width: 40px; 
+  height: 40px; 
+  background: #fff; 
+  border: 3px solid #000; 
+  box-shadow: 0 0 0 2px #0044cc, 
+              inset 0 0 0 3px #022263; 
+} 
+
+.window:nth-child(2) { 
+  left: auto; 
+  right: 10px; 
+} 
+
+.door-frame { 
+  position: absolute; 
+  top: 60px; 
+  left: 20px; 
+  width: calc(100% - 40px); 
+  height: 75%; 
+  border: 3px solid #000; 
+  box-shadow: 0 0 0 2px #0044cc, 
+  inset 0 0 0 3px #022263;
+}
+
+.tardis .door { 
+  position: absolute; 
+  top: 60px; 
+  width: 50%; 
+  height: 75%; 
+  background: #0044cc; 
+  border: 3px solid #000; 
+  box-shadow: 0 0 0 2px #0044cc, 
+              inset 0 0 0 3px #022263; 
+  z-index: 1; 
+} 
+
+.tardis .left-door { 
+  left: 0; 
+  transform-origin: left; 
+} 
+
+.tardis .right-door { 
+  right: 0; 
+  transform-origin: right; 
+} 
+
+.tardis:hover .left-door { 
+  animation: open-left-door 2s forwards; 
+} 
+
+.tardis:hover .right-door { 
+  animation: open-right-door 2s forwards; 
+} 
+
+@keyframes open-left-door { 
+  to { 
+    transform: rotateY(-90deg); 
+  } 
+} 
+
+@keyframes open-right-door { 
+  to { 
+    transform: rotateY(90deg); 
+  } 
 }
 
 @keyframes materialise {
