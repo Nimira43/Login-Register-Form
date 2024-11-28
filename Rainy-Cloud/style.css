@@ -27,3 +27,31 @@ body {
   width: 320px;
   border-bottom: 3px solid #006400;
 }
+
+.cloud { 
+  position: relative;
+  height: 100px;
+  width: 100%;
+  top: 50px;
+  background: #222;
+  border-radius: 100px;
+}
+
+.cloud:before {
+  content: ''; 
+  position: absolute;
+  height: 110px;
+  width: 110px;
+  top: -50px;
+  left: 40px;
+  background: #222;
+  border-radius: 50%;
+  box-shadow: 90px 0 0 30px #222;
+}
+
+.rain {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
