@@ -17,8 +17,8 @@ body {
 
 h2  {
   position: relative;
-  font-size: 3rem;
-  letter-spacing: 0.25rem;
+  font-size: 5rem;
+  letter-spacing: 2px;
   font-weight: 500;
   color: #333;
 }
