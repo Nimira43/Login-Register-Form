@@ -59,9 +59,12 @@ body {
 span {
   width: 10px;
   height: 10px;
-  background: #888;
+  background: #aaa;
   border-radius: 50%;
   margin: 0 2px;
+  animation: rain 5s linear infinite;
+  transform-origin: bottom;
+  animation-duration: calc(15s / var(--seconds));
 }
 
 @keyframes rain {
