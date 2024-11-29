@@ -19,5 +19,5 @@ for i in range(len(fib)-1):
   golden.append(ratio)
 
 print("\nThe corresponding Golden Ratio values are: ")
-for ration in golden:
+for ratio in golden:
   print(ratio)
