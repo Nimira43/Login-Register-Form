@@ -32,6 +32,7 @@ body {
   border-bottom: 16px solid #022263;
   box-shadow: 0 0 15px rgba(0, 0, 255, 0.7);
   animation: materialise 10s infinite;
+  cursor: pointer;
 }
 
 .tardis:before {
